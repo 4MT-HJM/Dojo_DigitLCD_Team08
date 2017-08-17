@@ -4,25 +4,19 @@
 
 LCD::LCD(int p_num):m_num(p_num)
 {
-	
-	//int tempNum;
-	if(p_num>10)
+	while(p_num > 10)
 	{
-		m_digits.emplace_back(p_num/10);
-   		m_digits.emplace_back(p_num%10);
+		m_digits.emplace_back(p_num%10);
+		p_num =p_num/10;
 	}
-	else
-	{
-		m_digits.emplace_back(p_num);
-	}
-
+	m_digits.emplace_back(p_num);
 }
 
 
 std::string LCD::print()
 {
 	std::string temp0,temp1,temp2;
-    for(auto it = m_digits.begin();it != m_digits.end();it++)
+    for(auto it = m_digits.rbegin();it != m_digits.rend();it++)
 	{
        temp0 += it->line0 + ' ';
 	   temp1 += it->line1 + ' ';

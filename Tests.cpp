@@ -32,3 +32,10 @@ TEST(DigitLCD, checkBiggerThanTenNum)
 	EXPECT_EQ(sixteen, l.print());
 }
 
+TEST(DigitLCD, check910)
+{
+	LCD l(910);
+	std::string n910 = "._. ... ._.\n|_| ..| |.|\n..| ..| |_|\n";
+	EXPECT_EQ(n910, l.print());
+	std::cout << n910 << std::endl;
+}
