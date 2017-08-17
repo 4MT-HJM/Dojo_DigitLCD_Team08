@@ -1,8 +1,10 @@
 #include <gtest/gtest.h>
+#include <string.h>
+#include "LCD.hpp"
 
-TEST(FSM, Example)
+TEST(DigitLCD, checkZero)
 {
-	
-	ASSERT_TRUE(false);
+	LCD l(0);
+	std::string zero = "._.\n|.|\n|_|\n";
+	EXPECT_EQ(zero, l.print());
 }
-

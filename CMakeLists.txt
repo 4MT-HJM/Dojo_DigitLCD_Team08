@@ -9,5 +9,5 @@ include_directories("googletest/googletest")
 include_directories("googletest/googlemock")
 add_library(gtestgmock googletest/googletest/src/gtest-all.cc googletest/googlemock/src/gmock-all.cc)
 
-add_executable(DojoTest mainTest.cpp Tests.cpp)
+add_executable(DojoTest mainTest.cpp Tests.cpp LCD.cpp Digit.cpp)
 target_link_libraries(DojoTest gtestgmock pthread)
