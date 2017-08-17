@@ -2,7 +2,7 @@
 #include "Digit.hpp"
 
 
-LCD::LCD(int p_num):m_num(p_num)
+LCD::LCD(int p_num)
 {
 	while(p_num > 10)
 	{
@@ -12,8 +12,7 @@ LCD::LCD(int p_num):m_num(p_num)
 	m_digits.emplace_back(p_num);
 }
 
-
-std::string LCD::print()
+std::string LCD::toString()
 {
 	std::string temp0,temp1,temp2;
     for(auto it = m_digits.rbegin();it != m_digits.rend();it++)
