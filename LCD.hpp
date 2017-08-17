@@ -1,12 +1,13 @@
 #pragma once
 #include <vector>
-#include "Digit.hpp"
 #include <string>
+
+class Digit;
 
 class LCD
 {
 public:
-	LCD(int p_num):m_num(p_num){};
+	LCD(int p_num);
 
 	std::string print();
 
